@@ -45,14 +45,14 @@ const App = () => {
 
   return (
     <div className="matrix">
-      {matrix.map((row, rowIndex) => (
-        <div key={rowIndex} className="row">
-          {row.map((color, colIndex) => (
+      {matrix.map((row, i) => (
+        <div key={i} className="row">
+          {row.map((color, j) => (
             <div
-              key={colIndex}
+              key={j}
               className="box"
               style={{ backgroundColor: color }}
-              onClick={() => handleClick(rowIndex, colIndex)}
+              onClick={() => handleClick(i, j)}
             ></div>
           ))}
         </div>
